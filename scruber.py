@@ -1,12 +1,23 @@
+from datetime import date
 __author__ = 'Ryan Soklaski'
 
 
-def scrub_player_data(rank, name, chars, pts):
+def rotate(list_, n):
+    """ Returns list_ rotated to the right by n steps.
+        Parameters
+        ----------
+        list_ : list
+        n : int
+        """
+    return list_[-n:] + list_[:-n]
+
+
+def scrub_player_data(data):
     """ Cleans entry from top-16 standings.
         Parameters
         ----------
-            data : tuple
-             - element of data from: scraper.scrape_url_standings(url) -> title, [(rank0, name0, chars0, pts0), ...]
+        data : tuple
+         - element of data from: scraper.scrape_url_standings(url) -> title, [(rank0, name0, chars0, pts0), ...]
         Returns
         -------
         rank : int
@@ -20,6 +31,7 @@ def scrub_player_data(rank, name, chars, pts):
         pts : int
             - Number of CPT points earned by player.
             """
+    rank, name, chars, pts = data
     rank = int(''.join([i for i in rank if i.isdigit()]))  # 1st -> 1, ...,13th -> 13
     spl = name.split('|')
     if len(spl) == 2:
@@ -52,3 +64,9 @@ def scrub_tourney_title(name):
         status = None
         name = tmp[0]
     return status, str(name.rstrip('(CPTA Qualifier)').rstrip('2015').strip())
+
+
+def scrub_tourney_dates(start_stop_dates):
+    tmp = start_stop_dates.split(' - ')
+    start, stop = [[int(i) for i in rotate(date_.split('-'), 1)] for date_ in tmp]
+    return date(*start), date(*stop)
