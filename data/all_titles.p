@@ -1,0 +1,82 @@
+(lp1
+VCannes Winter Clash
+p2
+aVAbuget Cup 2015
+p3
+aVNine States Tournament 2015
+p4
+aVPREMIER TOURNAMENT: Final Round 18
+p5
+aVPREMIER TOURNAMENT: NorCal Regionals 2015
+p6
+aVPREMIER TOURNAMENT: Hypespotting 4
+p7
+aVNorthwest Majors 7
+p8
+aVDouble Elimination
+p9
+aVKVO 2015
+p10
+aVTexas Showdown 2015
+p11
+aVRANKING TOURNAMENT: Combo Breaker 2015
+p12
+aVPREMIER TOURNAMENT: Stunfest 2015
+p13
+aVRANKING TOURNAMENT: FFM-Rumble #8
+p14
+aVRANKING TOURNAMENT: Dreamhack Summer 2015
+p15
+aVPREMIER TOURNAMENT: South East Asia Major 2015
+p16
+aVPREMIER TOURNAMENT: CEO 2015
+p17
+aVEvolution Championship Series 2015
+p18
+aVRANKING TOURNAMENT: Capcom Pro Tour Asia Shanghai Qualifier
+p19
+aVRANKING TOURNAMENT: VSFighting 5
+p20
+aVRANKING TOURNAMENT: FV Cup 2015
+p21
+aVRANKING TOURNAMENT: Taiwan Fighting Game Major (CPTA Qualifier)
+p22
+aVRANKING TOURNAMENT: Summer Jam 9
+p23
+aVRANKING TOURNAMENT: CPTA Hong Kong Qualifier
+p24
+aVRANKING TOURNAMENT: Manila Cup 2015
+p25
+aVRANKING TOURNAMENT: First Attack 2015
+p26
+aVRANKING TOURNAMENT: The Fall Classic 2015
+p27
+aVRANKING TOURNAMENT: Saigon Cup 2015 (CPTA Qualifier)
+p28
+aVPREMIER TOURNAMENT: Mad Catz Tokyo Game Show 2015
+p29
+aVPREMIER TOURNAMENT: KO Fighting Game Festival 2015
+p30
+aVRANKING TOURNAMENT: EGX 2015
+p31
+aVRANKING TOURNAMENT: The Call of Ragnarok
+p32
+aVRANKING TOURNAMENT: Red Fight District IV
+p33
+aVRANKING TOURNAMENT: Ze Fighting Game Championship (CPTA Qualifier)
+p34
+aVPREMIER TOURNAMENT: SoCal Regionals 2015
+p35
+aVPREMIER TOURNAMENT: Capcom Pro Tour Brazil
+p36
+aVPREMIER TOURNAMENT: Ultra Hyakkishu Cup 2015
+p37
+aVPREMIER TOURNAMENT: Milan Games Week 2015
+p38
+aVRANKING TOURNAMENT: Defend the North 2015
+p39
+aVRANKING TOURNAMENT: True Challengers Costa Rica 2015
+p40
+aVPREMIER TOURNAMENT: Canada Cup 2015
+p41
+a.
