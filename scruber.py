@@ -67,6 +67,7 @@ def scrub_tourney_title(name):
 
 
 def scrub_tourney_dates(start_stop_dates):
+    """ Returns tuple of start and stop dates."""
     tmp = start_stop_dates.split(' - ')
     start, stop = [[int(i) for i in rotate(date_.split('-'), 1)] for date_ in tmp]
     return date(*start), date(*stop)
