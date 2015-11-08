@@ -45,3 +45,46 @@ def scrape_url_standings(url):
     for entry in soup.find_all('tr')[1:]:
         data.append([i.contents[0] for i in entry.contents[::2]])
     return tourney_title, data  # tourney-title, (Rank, PlayerName, Char, Pts)
+
+
+def scrape_standings_tree(standing_url):
+    """ Returns list of tag, name, rank, player-page-url
+        Parameters
+        ----------
+        standing_url : str
+         - CPT Full Standings page url"""
+    # example url: 'https://capcomprotour.com/full-standings/?season=2015&lang='
+
+    # stand_url_list = ['https://capcomprotour.com/full-standings/?season=2015&lang=',
+    #                  'https://capcomprotour.com/full-standings/page/2/?season=2015&lang=en-us',
+    #                 'https://capcomprotour.com/full-standings/page/3/?season=2015&lang=en-us',
+    #                 'https://capcomprotour.com/full-standings/page/4/?season=2015&lang=en-us',
+    #                 'https://capcomprotour.com/full-standings/page/5/?season=2015&lang=en-us',
+    #                 'https://capcomprotour.com/full-standings/page/6/?season=2015&lang=en-us']
+    player_rank_link = []
+    response = urllib2.urlopen(standing_url)
+    soup = BeautifulSoup(response.read(), 'html.parser')
+    for bit in soup.findAll('tr')[1:]:
+        rank = int(bit.td.text)
+
+        name = str(bit.a.text)
+        spl = name.split('|')
+        if len(spl) == 2:
+            tag, name = spl
+        else:
+            tag, name = None, spl[0]
+
+        url = str(bit.a.get('href'))
+        player_rank_link.append([(tag, name), rank, url])
+    return player_rank_link
+
+
+def scrape_player_country(player_page_url):
+    """ Return country (string) that player hails from
+        Parameters
+        ----------
+        player_page_url : str"""
+    # example url: https://capcomprotour.com/player/?player=7309&lang=en-us
+    response = urllib2.urlopen(player_page_url)
+    soup = BeautifulSoup(response.read(), 'html.parser')
+    return str(soup.findAll('p')[1].text)
