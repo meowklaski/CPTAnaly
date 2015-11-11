@@ -20,16 +20,17 @@ def scrub_player_data(data):
          - element of data from: scraper.scrape_url_standings(url) -> title, [(rank0, name0, chars0, pts0), ...]
         Returns
         -------
-        rank : int
-            - Player rank in tournament.
-        tag : str
-            - Player's sponsor tag. tag=None if no sponsor is listed.
-        name : str
-            - Player name. No surrounding whitespace.
-        chars : list
-            - String entry for each character used by player in tournament.
-        pts : int
-            - Number of CPT points earned by player.
+        out : Tuple(int, str, str, List[str, ...], int)
+            - rank : int
+                -- Player rank in tournament.
+            - tag : str
+                -- Player's sponsor tag. tag=None if no sponsor is listed.
+            - name : str
+                -- Player name. No surrounding whitespace.
+            - chars : list
+                -- String entry for each character used by player in tournament.
+            - pts : int
+                -- Number of CPT points earned by player.
             """
     rank, name, chars, pts = data
     rank = int(''.join([i for i in rank if i.isdigit()]))  # 1st -> 1, ...,13th -> 13
